@@ -78,7 +78,51 @@ module fanshroud()
     }
 }
 
+//fan cover
+//
+module fan_cover(){
+	union(){
+	difference(){
+		translate([0,-12,0]){
+		cube([62,2,50]);
+		}
+		//cutout fan
+        translate([31,-12,25]){
+            rotate([0,90,90])
+            cylinder(h=5, r=20);
+        }
+        //cutout fan screws
+        translate([11,-12,5]){
+            rotate([0,90,90])
+            cylinder(h=50, r=2);
+        }
+        translate([11,-12,45]){
+            rotate([0,90,90])
+            cylinder(h=50, r=2);
+        }
+        translate([52,-12,5]){
+            rotate([0,90,90])
+            cylinder(h=50, r=2);
+        }
+        //translate([52,-12,45]){
+        //    rotate([0,90,90])
+        //    cylinder(h=50, r=2);
+        //}
+	}//difference
+		translate([0,-12,0])
+			cube([2,12,50]);
+		translate([60,-12,0])
+			cube([2,12,50]);
+      translate([52,-10,45]){
+          sphere(r=2);
+      }
+
+	}//union
+
+}
+
 //**************************
 // create the object
 
 fanshroud();
+fan_cover();
