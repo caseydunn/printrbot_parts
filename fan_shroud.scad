@@ -1,6 +1,9 @@
 //!OpenSCAD
 //
 // printrbot LC toolless fan shroud
+//
+//snap fit for part and hotend cooling
+//
 
 module fanshroud()
 {
@@ -75,7 +78,7 @@ module fanshroud()
     }
 }
 
+//**************************
+// create the object
+
 fanshroud();
-
-
-
