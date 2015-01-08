@@ -7,10 +7,9 @@
 
 module fanshroud()
 {
-    difference(){
-    //add lip to sides
-    union(){
-    difference(){
+    difference(){ //subtract out side holes and wire path
+    union(){ //add lip to sides
+    difference(){ // cut extruter and air path out of cube
         cube([62, 34, 50]);
         //cutout center
         translate([2.5,2,3]){
