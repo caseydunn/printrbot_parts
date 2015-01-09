@@ -114,9 +114,23 @@ module fan_cover(){
 			cube([2,12,50]);
       translate([52,-10,45]){
           sphere(r=2);
-      }
+		}
+		fangrill();
+  
 
 	}//union
+
+}
+
+module fangrill(){
+
+	translate([31,-12,25]){
+		rotate([0,90,90])
+      cylinder(h=2, r=5);
+	}
+	translate([30.5,-12,0]){
+		cube([1,2,45]);
+	}
 
 }
 
