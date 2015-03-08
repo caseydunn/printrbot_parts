@@ -1,10 +1,10 @@
 //!OpenSCAD
 
-module repressor_top()
+module repressor_blade()
 {
 	difference() {
 		union() {
-			cube([44, 90, 12], center = true);
+			cube([80, 30, 45], center = true);
             translate([22,0,0]){
                 cube([2, 70, 8], center = true);
             }
@@ -24,15 +24,13 @@ module repressor_top()
         translate([0,-15,0]){
             cube([46, 12, 5], center = true);
 	    }
-        translate([0,-30,0]){
-            cube([46, 12, 5], center = true);
+        translate([0,-13,-5]){
+            cube([80, 5, 35], center = true);
         }
-        translate([11.5,35,0]){
-            rotate([-30,0,0]){
-                cube([46, 40, 5], center = true);
-            }
+        rotate([-60,0,0]){
+                cube([80, 55, 2], center = true);
         }
 	}
 }
 
-repressor_top();
+repressor_blade();
